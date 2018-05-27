@@ -51,7 +51,7 @@ Gem::Specification.new do |spec|
   # Runtime Dependencies
   # --------------------------------------------------------------------------
   
-  spec.add_dependency 'nrser', '~> 0.3.5'
+  spec.add_dependency 'nrser', '~> 0.3.6'
   
   # System notification support on OSX
   spec.add_dependency 'terminal-notifier', '~> 2.0.0'
