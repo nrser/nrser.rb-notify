@@ -16,7 +16,7 @@ Gem::Specification.new do |spec|
 
   spec.files         = Dir['lib/**/*.rb'] +
                         Dir['assets/**/*.png'] +
-                        %w(LICENSE.txt README.md)
+                        %w(LICENSE.txt README.md VERSION)
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
