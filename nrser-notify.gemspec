@@ -14,12 +14,46 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/nrser/nrser.rb-notify"
   spec.license       = "MIT"
 
-  spec.files         = Dir["lib/**/*.rb"] + %w(LICENSE.txt README.md)
+  spec.files         = Dir['lib/**/*.rb'] +
+                        Dir['assets/**/*.png'] +
+                        %w(LICENSE.txt README.md)
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
-
-  spec.add_development_dependency "bundler", "~> 1.16"
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
+  
+  
+  # Dependencies
+  # ==========================================================================
+  
+  # Development Dependencies
+  # --------------------------------------------------------------------------
+  
+  spec.add_development_dependency "bundler", "~> 1.16", '>= 1.16.1'
+  
+  spec.add_development_dependency "rake", "~> 12.3"
+  
+  # Testing with `rspec`
+  spec.add_development_dependency "rspec", "~> 3.7"
+  
+  # Doc site generation with `yard`
+  spec.add_development_dependency 'yard', '~> 0.9.12'
+  
+  # GitHub-Flavored Markdown (GFM) for use with `yard`
+  spec.add_development_dependency 'github-markup', '~> 1.6'
+  
+  # Provider for `commonmarker`, the new GFM lib
+  spec.add_development_dependency 'yard-commonmarker', '~> 0.3.0'
+  
+  # Nicer REPL experience
+  spec.add_development_dependency "pry", '~> 0.10.4'
+  
+  
+  # Runtime Dependencies
+  # --------------------------------------------------------------------------
+  
+  spec.add_dependency 'nrser', '~> 0.3.5'
+  
+  # System notification support on OSX
+  spec.add_dependency 'terminal-notifier', '~> 2.0.0'
+  
 end
