@@ -34,6 +34,7 @@ module NRSER
 # =======================================================================
 
 module Notify
+  extend ::MethodDecorators
   
   +NRSER::LazyAttr
   # Is the `terminal-notifier` gem available?
